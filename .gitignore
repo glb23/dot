@@ -1,3 +1,4 @@
 
 # mc
 .local/share/mc/history
+.config/mc/panels.ini
