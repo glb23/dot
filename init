@@ -1,2 +1,8 @@
 cd ~
+
+# tmux
 ln -s .local/dot/.tmux.conf
+
+# mc
+ln -s .local/share/mc/skins
+ln -s .config/mc
