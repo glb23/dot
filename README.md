@@ -2,6 +2,7 @@
 
 ```
 cd
+mkdir -p .local
 cd .local
 git clone https://github.com/glb23/dot
 cd
