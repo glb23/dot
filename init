@@ -1,8 +1,16 @@
 cd ~
+mkdir -p .local/share
+mkdir -p .config
 
 # tmux
+cd
 ln -s .local/dot/.tmux.conf
 
 # mc
-ln -s .local/share/mc/skins
-ln -s .config/mc
+cd
+
+cd .local/share
+ln -s ~/.local/dot/.local/share/mc
+
+cd ~/.config
+ln -s ~/.local/dot/.config/mc
