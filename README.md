@@ -18,3 +18,11 @@ git pull
 cd
 source .local/dot/init
 ```
+
+### clean mc
+
+```
+cd
+rm -r .config/mc
+rm -r .local/share/mc
+```
