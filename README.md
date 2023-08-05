@@ -9,6 +9,13 @@ cd ~/.local
 git clone https://github.com/glb23/dot
 cd ~
 source .local/dot/init
+
+```
+
+Do this after any changes in your tmux config. It can be run from in- or outside a tmux session. There is only one central tmux server where this is apllied:
+
+```
+tmux source-file .tmux.conf
 ```
 
 ## Bash recommended
