@@ -17,7 +17,7 @@ This setup recommends bash. You can check the current shellfor the current user 
 
 ```
 cat /etc/passwd|grep $USER
-sudo chsh -s /bin/bash $USER
+sudo chsh -s $(which bash) $USER
 cat /etc/passwd|grep $USER
 ```
 
