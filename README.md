@@ -4,7 +4,7 @@ Be careful if you have local modifications, this overwrites everything without a
 
 ```
 mkdir -p ~/.local/dot
-rm -R ~/.local/dot
+rm -Rf ~/.local/dot
 cd ~/.local
 git clone https://github.com/glb23/dot
 cd ~
