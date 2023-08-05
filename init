@@ -1,16 +1,21 @@
-cd ~
-mkdir -p .local/share
-mkdir -p .config
+mkdir -p ~/.config
+mkdir -p ~/.local/share
 
 # tmux
-cd
-ln -s .local/dot/.tmux.conf
+rm ~/.tmux.conf
+ln -s ~/.local/dot/.tmux.conf ~/.tmux.conf
+
+# If no local markers are present, set marker 1.
+# Never remove local markers.
+if [ -z "$(ls ~/.tmux.marker* 2>/dev/null)" ]; then
+  echo "This file marks the version N of" >> ~/.tmux.marker1
+  echo " ~./local/dot/.tmux.conf.includeN" >> ~/.tmux.marker1
+  echo "that should be included with the .tmux.conf configuration." >> ~/.tmux.marker1
+fi
 
 # mc
-cd
+rm -R ~/.local/share/mc
+rm -R ~/.config/mc
 
-cd .local/share
-ln -s ~/.local/dot/.local/share/mc
-
-cd ~/.config
+ln -s ~/.local/dot/.local/share/mc ~/.local/share/mc
 ln -s ~/.local/dot/.config/mc
