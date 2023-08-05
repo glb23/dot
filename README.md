@@ -1,7 +1,9 @@
-### on a new machine
+### Install or Update
+
+Be careful if you have local modifications, this overwrites everything without asking:
 
 ```
-mkdir -p ~/.local
+mkdir -p ~/.local/dot
 rm -R ~/.local/dot
 cd ~/.local
 git clone https://github.com/glb23/dot
