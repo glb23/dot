@@ -11,6 +11,16 @@ cd ~
 source .local/dot/init
 ```
 
+## Bash recommended
+
+This setup recommends bash. You can check the current shellfor the current user and change it to `/bin/bash` with the following commands:
+
+```
+cat /etc/passwd|grep $USER
+sudo chsh -s /bin/bash $USER
+cat /etc/passwd|grep $USER
+```
+
 ## Select the best alternative configuration
 
 There was a file `~/.tmux.marker1` created to mark alternative configuration 1.
