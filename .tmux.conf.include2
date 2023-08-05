@@ -1,0 +1,4 @@
+# move window left or right with ctrl-shift-F3/4 and select it
+# alternative implementation
+bind-key -n C-S-F3 swap-window -t :-1
+bind-key -n C-S-F4 swap-window -t :+1
