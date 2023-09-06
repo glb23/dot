@@ -1,12 +1,9 @@
 mkdir -p ~/.config
 mkdir -p ~/.local/share
 
-# remove old versions and supress `not found` errors
-rm ~/.tmux.conf 2>/dev/null
-rm -R ~/.local/share/mc 2>/dev/null
-rm -R ~/.config/mc 2>/dev/null
+# 1. tmux
 
-# Create symlink to tmux config
+rm ~/.tmux.conf 2>/dev/null
 ln -s ~/.local/dot/.tmux.conf ~/.tmux.conf
 
 # If no local markers for tmux are present, set marker 1.
@@ -17,7 +14,18 @@ if [ -z "$(ls ~/.mark*.tmux 2>/dev/null)" ]; then
   echo "that should be included with the .tmux.conf configuration." >> ~/.mark1.tmux
 fi
 
+# 2. mc
+
+rm -R ~/.local/share/mc 2>/dev/null
+rm -R ~/.config/mc 2>/dev/null
+
 # For mc we need 2 symbolic links:
 ln -s ~/.local/dot/.local/share/mc ~/.local/share/mc
 ln -s ~/.local/dot/.config/mc ~/.config/mc
 
+# 3. nvim
+rm ~/.vimrc 2>/dev/null
+rm -R ~/.config/nvim 2>/dev/null
+
+ln -s ~/.local/dot/.config/nvim ~/.config/nvim
+ln -s ~/.config/nvim/init.vim ~/.vimrc
