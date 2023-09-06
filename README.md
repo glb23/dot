@@ -11,7 +11,7 @@ cd ~
 source .local/dot/init
 
 # Run this after any changes in your tmux config. It can be run from in- or outside
-# a tmux session. There is only one central tmux server where this is apllied:
+# a tmux session. There is only one central tmux server where this is applied:
 tmux source-file .tmux.conf
 
 ```
@@ -40,3 +40,6 @@ Then you can edit `~/.bashrc` and insert this after the first if-fi block:
 
 You need to `source ~/.bashrc` and mc should then use the correct theme.
 
+## vim and neovim
+
+The setup can be used for both vim and neovim.
