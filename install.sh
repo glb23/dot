@@ -48,3 +48,8 @@ ln -s ~/.local/dot/.config/nvim ~/.config/nvim
 # for the symlink will not exist
 rm ~/.vimrc 2>/dev/null
 ln -s ~/.config/nvim/init.vim ~/.vimrc
+
+# 4. zellij
+rm    ~/.config/zellij 2>/dev/null
+rm -R ~/.config/zellij 2>/dev/null
+ln -s ~/.local/dot/.config/zellij ~/.config/zellij
