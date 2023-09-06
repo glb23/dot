@@ -11,7 +11,7 @@ rm -Rf ~/.local/dot
 cd ~/.local
 git clone https://github.com/glb23/dot
 cd ~
-source .local/dot/init
+.local/dot/install.sh
 
 # Run this after any changes in your tmux config. It can be run from in- or outside
 # a tmux session. There is only one central tmux server where this is applied:
@@ -23,7 +23,7 @@ tmux source-file .tmux.conf
 Go to the `~/.local/dot` directory and clean it up, commit or stash any changes. 
 
 Then run `git pull`.
-Then run `init` again.
+Then run `./install.sh` again.
 
 ## Bash recommended
 
