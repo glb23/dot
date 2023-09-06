@@ -1,6 +1,9 @@
-### Install or Update
+### First Install
 
-Be careful if you have local modifications, this overwrites everything without asking:
+(How to update see below)
+
+Be careful if you have local modifications in any config files, this overwrites everything without asking and without backups. See the
+`init` script for details.
 
 ```
 mkdir -p ~/.local/dot
@@ -13,8 +16,14 @@ source .local/dot/init
 # Run this after any changes in your tmux config. It can be run from in- or outside
 # a tmux session. There is only one central tmux server where this is applied:
 tmux source-file .tmux.conf
-
 ```
+
+### How to update
+
+Go to the `~/.local/dot` directory and clean it up, commit or stash any changes. 
+
+Then run `git pull`.
+Then run `init` again.
 
 ## Bash recommended
 
