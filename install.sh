@@ -53,3 +53,22 @@ ln -s ~/.config/nvim/init.vim ~/.vimrc
 rm    ~/.config/zellij 2>/dev/null
 rm -R ~/.config/zellij 2>/dev/null
 ln -s ~/.local/dot/.config/zellij ~/.config/zellij
+
+
+# 5. Make the .bashrc file source the include files
+
+# BOTTOM
+line_to_append="source ~/.local/dot/.bashrc_include_bottom"
+if ! grep -Fxq "$line_to_append" ~/.bashrc; then
+  # If the line was not found, append it to ~/.bashrc
+  echo "$line_to_append" >> ~/.bashrc
+fi
+
+# TOP
+line_to_prepend="source ~/.local/dot/.bashrc_include_top"
+if ! grep -Fxq "$line_to_prepend" ~/.bashrc; then
+  temp_file=$(mktemp)
+  echo "$line_to_prepend" > "$temp_file"
+  cat ~/.bashrc >> "$temp_file"
+  mv "$temp_file" ~/.bashrc
+fi
