@@ -1,2 +1,6 @@
 # This file will be sourced from the top of ~/.bashrc
-# currently empty
+
+# Because there is a check for interactive shell AFTER this in .bashrc,
+# the following will also be executed when NOT running an interactive shell.
+# If this is not desired, do additional checks here
+# or place the commands into .bashrc_include_bottom
