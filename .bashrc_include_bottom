@@ -2,3 +2,7 @@
 
 # activate autojump
 [[ -s /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh ]] && source /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh
+
+# activate fasd
+[[ -s /usr/local/bin/fasd ]] && eval "$(fasd --init auto)"
+[[ -s       /usr/bin/fasd ]] && eval "$(fasd --init auto)"

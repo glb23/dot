@@ -1,0 +1,20 @@
+env:
+  TERM: xterm-256color
+shell:
+  program: /usr/bin/bash
+  args:
+    - --login
+key_bindings:
+  # use ctrl-f to fzf cd into some important dirs:
+  - key: F
+    mods: Control
+    # Read base dirs from ~/.fzfdirs, and list these and all dirs one level down
+    # pip them into fzf, cd into the result.
+    # You need to but a list of base dirs into ~/.fzfdirs, one per line.
+    # You can also sort the result by ascii reversed by piping through this before fzf:
+    # LC_ALL=C sort -r
+    # The sed command is to reverse the order of the result, because soemhow it
+    # appears in reverse order in fzf.
+    chars: |
+      cd "$(find $(cat ~/.local/dot/fzfdirsbase ~/.fzfdirslocal | tr '\n' '\0' | xargs -0 -I {} sh -c 'test -e {} && echo {}') -maxdepth 1 \( -type d -o -type l \) | sed -n '1!G;h;$p' | fzf)"
+  

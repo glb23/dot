@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 mkdir -p ~/.config
 mkdir -p ~/.local/share
 
@@ -14,6 +14,7 @@ mkdir -p ~/.local/share
 # At this point we are sure that if anythoing remains, it is the original
 # file tree, so we can safely remove it with `rm -R`.
 
+# [A] - Symlinks for various software
 
 # 1. tmux
 
@@ -57,7 +58,21 @@ if command -v zellij >/dev/null 2>&1; then
   ln -s ~/.local/dot/.config/zellij ~/.config/zellij
 fi
 
-# 5. Make the .bashrc file source the include files
+# 5. alacritty
+if command -v alacritty >/dev/null 2>&1; then
+  # only if the alacritty binary is in the path
+  rm    ~/.alacritty.yml 2>/dev/null
+  ln -s ~/.local/dot/.alacritty.yml ~/.alacritty.yml
+  if command -v fzf >/dev/null 2>&1; then
+    # To fzf cd into dirs from alacritty,
+    # see .alacritty.yml and ./fzfdirsbase -
+    # put your additional fzf base dirs here:
+    touch ~/.fzfdirslocal
+  fi
+fi
+
+
+# [B] - source the include files from .bashrc
 
 # BOTTOM
 line_to_append="source ~/.local/dot/.bashrc_include_bottom"
