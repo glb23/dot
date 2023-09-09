@@ -50,10 +50,12 @@ rm ~/.vimrc 2>/dev/null
 ln -s ~/.config/nvim/init.vim ~/.vimrc
 
 # 4. zellij
-rm    ~/.config/zellij 2>/dev/null
-rm -R ~/.config/zellij 2>/dev/null
-ln -s ~/.local/dot/.config/zellij ~/.config/zellij
-
+if command -v zellij >/dev/null 2>&1; then
+  # only if the zellij binary is in the path
+  rm    ~/.config/zellij 2>/dev/null
+  rm -R ~/.config/zellij 2>/dev/null
+  ln -s ~/.local/dot/.config/zellij ~/.config/zellij
+fi
 
 # 5. Make the .bashrc file source the include files
 
