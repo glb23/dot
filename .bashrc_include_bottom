@@ -1,7 +1,8 @@
 # This file will be sourced from the end of ~/.bashrc
 
 # activate autojump
-[[ -s /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh ]] && source /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh
+[[ -s /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh ]] && \
+    source /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh
 
 # activate fasd
 [[ -s /usr/local/bin/fasd ]] && eval "$(fasd --init auto)"
