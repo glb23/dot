@@ -42,3 +42,40 @@ key_bindings:
             cd "$RES"
         fi
       fi
+  # use ctrl-a exactly the same but only for files:
+  - key: A
+    mods: Control
+    # USAGE:
+    # type ctrl-f in alacritty, it will run fzf with inline configuration:
+    # - ctrl-v will open the highlight in vim
+    # - ctrl-t will create a new tmux session and cd into the highlighted dir.
+    # Explanation:
+    # Read base dirs from the 2 mentioned files and list these and all dirs one
+    # level down. Then pipe them into fzf, the fzf options create as prefixed string.
+    # The if statement does the rest.
+    # You need to but a list of base dirs into ~/.fzfdirs, one per line.
+    # We coould also sort the result by ascii reversed by piping through this before fzf:
+    # LC_ALL=C sort -r
+    # The sed command is to reverse the order of the result back to the order
+    # of our directories.
+
+    # The > will glue everything into 1 line with spaces:
+    chars: >
+      DIRS_BASE=$(echo '/service:/svc:/srv:/opt:/etc:/var/tmp:/var/log:~/.ssh:/home:/home/webroot:/home/debian:/var/www:/app:~/.local:~/.config:~:' | tr ':' '\n');
+      DIRS=$(echo $DIRS_BASE | cat ~/.fzfdirslocal | tr '\n' '\0' | xargs -0 -I {} sh -c 'test -e {} && echo {}' );
+      RES="$(find $DIRS -maxdepth 2 \( -type l -o -type f \) \
+        | sed -n '1!G;h;$p' \
+        | fzf --bind '[:execute(echo T{})+abort' --bind ']:execute(echo V{})+abort' \
+      )";
+      if [[ "${RES:0:1}" == 'T' ]]; then 
+        tmux new-session "cd ${RES:1}; bash"; 
+      elif [[ "${RES:0:1}" == 'V' ]]; then 
+        vim "${RES:1}"; 
+      else 
+        if [ -f "$RES" ]; then
+            # for files cd to containing dir
+            cd "$(dirname "$RES")"
+        else
+            cd "$RES"
+        fi
+      fi
