@@ -1,5 +1,17 @@
 # This file will be sourced from the end of ~/.bashrc
 
+# function 'cheat' for cheatsheet
+cht() {
+  curl "cheat.sh/$*"
+}
+
+# function 'cheat | more' for cheatsheet with paging
+chtm() {
+  curl "cheat.sh/$*" | more
+}
+
+alias ze='zellij'
+
 # activate autojump
 [[ -s /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh ]] && \
     source /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh
