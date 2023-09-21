@@ -42,11 +42,11 @@ key_bindings:
             cd "$RES"
         fi
       fi
-  # use ctrl-a exactly the same but only for files:
-  - key: A
+  # use ctrl-v exactly the same but only for files:
+  - key: V
     mods: Control
     # USAGE:
-    # type ctrl-f in alacritty, it will run fzf with inline configuration:
+    # type ctrl-v in alacritty, it will run fzf with inline configuration:
     # - ctrl-v will open the highlight in vim
     # - ctrl-t will create a new tmux session and cd into the highlighted dir.
     # Explanation:
