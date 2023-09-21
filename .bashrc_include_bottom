@@ -10,6 +10,8 @@ chtm() {
   curl "cheat.sh/$*" | more
 }
 
+alias ze='zellij'
+
 # activate autojump
 [[ -s /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh ]] && \
     source /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh
