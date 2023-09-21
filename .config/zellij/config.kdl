@@ -4,6 +4,12 @@ keybinds {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
         bind "F1" { ToggleFloatingPanes; }
+        bind "F2" { NewTab; }
+        bind "F3" { GoToPreviousTab; }
+        bind "F4" { GoToNextTab; }
+        bind "F8" { RenameTab; }
+        // how to use Shift with Fn? How to rename session? 
+        // bind "Shift F8" { RenameSession; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
