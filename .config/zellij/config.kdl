@@ -243,6 +243,9 @@ pane_frames false
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
+// Find the themes code here: https://github.com/zellij-org/zellij/tree/main/zellij-utils/assets/themes
+// Visit the demo page first: https://zellij.dev/documentation/theme-gallery
+
 themes {
 
     dracula {
