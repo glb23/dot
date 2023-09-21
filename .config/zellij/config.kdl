@@ -276,7 +276,9 @@ themes {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "dracula"
+// this does not (really) differ from default:
+theme "dracula"
+// too pale:
 theme "gruvbox-dark"
 
 // The name of the default layout to load on startup
