@@ -1,5 +1,11 @@
 # This file will be sourced from the end of ~/.bashrc
 
+# function 'cheat' for cheatsheet
+cheat() { curl cheat.sh/$@ }
+
+# function 'cheatm' for cheatsheet with paging
+cheatm() { curl cheat.sh/$@ | more}
+
 # activate autojump
 [[ -s /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh ]] && \
     source /home/ad/.local/dot/opt/autojump/etc/profile.d/autojump.sh
