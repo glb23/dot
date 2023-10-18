@@ -3,3 +3,11 @@
 display-message "including tmux conf alt. 2"
 bind-key -n C-S-F3 swap-window -t :-1
 bind-key -n C-S-F4 swap-window -t :+1
+
+# Invert colors for the current window
+set-window-option -g window-status-current-fg black
+set-window-option -g window-status-current-bg '#7FFF00'
+
+# highlight current window
+#set-window-option -g window-status-current-fg black
+#set-window-option -g window-status-current-bg green
