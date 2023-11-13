@@ -1,9 +1,126 @@
 env:
   TERM: xterm-256color
+
 shell:
   program: /usr/bin/bash
   args:
     - --login
+
+import:
+  #- ~/.local/dot/alacritty-theme/themes/afterglow.yaml
+  #- ~/.local/dot/alacritty-theme/themes/alabaster.yaml
+  #- ~/.local/dot/alacritty-theme/themes/alabaster_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/argonaut.yaml
+  #- ~/.local/dot/alacritty-theme/themes/atom_one_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/ayu_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/ayu_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/baitong.yaml
+  #no - ~/.local/dot/alacritty-theme/themes/base16_default_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/blood_moon.yaml
+  #no - ~/.local/dot/alacritty-theme/themes/bluish.yaml
+  #- ~/.local/dot/alacritty-theme/themes/breeze.yaml
+  #- ~/.local/dot/alacritty-theme/themes/campbell.yaml
+  #- ~/.local/dot/alacritty-theme/themes/carbonfox.yaml
+  #- ~/.local/dot/alacritty-theme/themes/catppuccin_frappe.yaml
+  #- ~/.local/dot/alacritty-theme/themes/catppuccin_latte.yaml
+  #- ~/.local/dot/alacritty-theme/themes/catppuccin_macchiato.yaml
+  #- ~/.local/dot/alacritty-theme/themes/catppuccin_mocha.yaml
+  #- ~/.local/dot/alacritty-theme/themes/challenger_deep.yaml
+  #- ~/.local/dot/alacritty-theme/themes/citylights.yaml
+  #- ~/.local/dot/alacritty-theme/themes/Cobalt2.yaml
+  #- ~/.local/dot/alacritty-theme/themes/cyber_punk_neon.yaml
+  #- ~/.local/dot/alacritty-theme/themes/darcula.yaml
+  #- ~/.local/dot/alacritty-theme/themes/dark_pastels.yaml
+  #- ~/.local/dot/alacritty-theme/themes/deep_space.yaml
+  #- ~/.local/dot/alacritty-theme/themes/doom_one.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/dracula.yaml
+  #- ~/.local/dot/alacritty-theme/themes/everforest_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/everforest_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/falcon.yaml
+  #- ~/.local/dot/alacritty-theme/themes/flat_remix.yaml
+  #- ~/.local/dot/alacritty-theme/themes/flexoki.yaml
+  # works with mc, background ist still very intense:
+  #- ~/.local/dot/alacritty-theme/themes/github_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_dark_colorblind.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_dark_default.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/github_dark_dimmed.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_dark_high_contrast.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_dark_tritanopia.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_light_colorblind.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_light_default.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_light_high_contrast.yaml
+  #- ~/.local/dot/alacritty-theme/themes/github_light_tritanopia.yaml
+  #- ~/.local/dot/alacritty-theme/themes/gnome_terminal.yaml
+  # works with mc and nmtui, but contains strange blue colors:
+  - ~/.local/dot/alacritty-theme/themes/gotham.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/gruvbox_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/gruvbox_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/gruvbox_material_medium_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/gruvbox_material_medium_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/hardhacker.yaml
+  # works with mc but colors are very intense:
+  #- ~/.local/dot/alacritty-theme/themes/high_contrast.yaml
+  #- ~/.local/dot/alacritty-theme/themes/horizon-dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/hyper.yaml
+  #- ~/.local/dot/alacritty-theme/themes/inferno.yaml
+  # works with mc and nmtui but both very intense:
+  #- ~/.local/dot/alacritty-theme/themes/iterm.yaml
+  #- ~/.local/dot/alacritty-theme/themes/kanagawa_dragon.yaml
+  #- ~/.local/dot/alacritty-theme/themes/kanagawa_wave.yaml
+  #- ~/.local/dot/alacritty-theme/themes/konsole_linux.yaml
+  # works with mc and nmtui but both very intense:
+  #- ~/.local/dot/alacritty-theme/themes/low_contrast.yaml
+  #- ~/.local/dot/alacritty-theme/themes/Mariana.yaml
+  # works with mc and nmtui but both very intense:
+  #- ~/.local/dot/alacritty-theme/themes/marine_dark.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/material_theme.yaml
+  #- ~/.local/dot/alacritty-theme/themes/material_theme_mod.yaml
+  #- ~/.local/dot/alacritty-theme/themes/meliora.yml               smoooooth.yaml
+  #- ~/.local/dot/alacritty-theme/themes/midnight-haze.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/monokai_charcoal.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/monokai_pro.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/moonlight_ii_vscode.yaml
+  #- ~/.local/dot/alacritty-theme/themes/msx.yaml
+  #- ~/.local/dot/alacritty-theme/themes/night_owlish_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/nightfox.yaml
+  #- ~/.local/dot/alacritty-theme/themes/noctis-lux.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/nord.yaml
+  #light- ~/.local/dot/alacritty-theme/themes/nord_light.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/nordic.yaml
+  #- ~/.local/dot/alacritty-theme/themes/oceanic_next.yaml
+  #- ~/.local/dot/alacritty-theme/themes/omni.yaml
+  #no- ~/.local/dot/alacritty-theme/themes/one_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/palenight.yaml
+  #- ~/.local/dot/alacritty-theme/themes/papercolor_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/papercolor_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/papertheme.yaml
+  #- ~/.local/dot/alacritty-theme/themes/pencil_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/pencil_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/rainbow.yaml
+  #- ~/.local/dot/alacritty-theme/themes/remedy_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/rose-pine-dawn.yaml
+  #- ~/.local/dot/alacritty-theme/themes/rose-pine-moon.yaml
+  #- ~/.local/dot/alacritty-theme/themes/rose-pine.yaml
+  #- ~/.local/dot/alacritty-theme/themes/seashells.yaml
+  #- ~/.local/dot/alacritty-theme/themes/snazzy.yaml
+  #- ~/.local/dot/alacritty-theme/themes/solarized_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/solarized_light.yaml
+  #- ~/.local/dot/alacritty-theme/themes/taerminal.yaml
+  #- ~/.local/dot/alacritty-theme/themes/tango_dark.yaml
+  #- ~/.local/dot/alacritty-theme/themes/tender.yaml
+  #- ~/.local/dot/alacritty-theme/themes/terminal_app.yaml
+  #- ~/.local/dot/alacritty-theme/themes/thelovelace.yaml
+  #- ~/.local/dot/alacritty-theme/themes/tokyo-night-storm.yaml
+  #- ~/.local/dot/alacritty-theme/themes/tokyo-night.yaml
+  #- ~/.local/dot/alacritty-theme/themes/tomorrow_night.yaml
+  #- ~/.local/dot/alacritty-theme/themes/tomorrow_night_bright.yaml
+  # very good with mc but ubuntu is ugly:
+  #- ~/.local/dot/alacritty-theme/themes/ubuntu.yaml
+  #- ~/.local/dot/alacritty-theme/themes/wombat.yaml
+  #- ~/.local/dot/alacritty-theme/themes/xterm.yaml
+  #- ~/.local/dot/alacritty-theme/themes/zenburn.yaml
+
 key_bindings:
   # use ctrl-f to fzf cd into some important dirs:
   - key: F
@@ -16,7 +133,7 @@ key_bindings:
     # Read base dirs from the 2 mentioned files and list these and all dirs one
     # level down. Then pipe them into fzf, the fzf options create as prefixed string.
     # The if statement does the rest.
-    # You need to but a list of base dirs into ~/.fzfdirs, one per line.
+    # YOU NEED TO PUT AN ADDITIONAL LIST OF BASEDIRS INTO ~/.fzfdirs, one per line.
     # We coould also sort the result by ascii reversed by piping through this before fzf:
     # LC_ALL=C sort -r
     # The sed command is to reverse the order of the result back to the order
